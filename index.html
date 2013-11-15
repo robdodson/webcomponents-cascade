@@ -522,92 +522,6 @@
         </section>
 
         <section class="left-align">
-          <h3><strong>Insertion points</strong> invite content from the host element into the Shadow DOM.</h3>
-
-          <h3>Use the <strong>&lt;content&gt; tag</strong> to create an insertion point.</h3>
-        </section>
-
-        <section id="demo-insertion-points" class="demo">
-          <h3>Insertion Points</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-
-            <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;div class="widget"&gt;Jigglypuff&lt;/div&gt;
-            </code></pre>
-          </div>
-
-          <div class="widget">
-            <div class="hidden pokemon">
-              Jigglypuff
-            </div>
-          </div>
-
-          <template>
-            <h2>A Wild <content></content> Appeared!</h2>
-          </template>
-
-          <img class="jigglypuff chromeless" src="./img/jigglypuff.png">
-
-          <aside class="notes">
-            A single content tag is kind of like a catch-all
-          </aside>
-        </section>
-
-        <section class="left-align">
-          <h3>Specific content can be targeted with the <strong>select</strong> attribute. </h3>
-        </section>
-
-        <section id="demo-select" class="demo">
-          <h3>Select</h3>
-          <div class="ribbon-container">
-            <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;h3&gt;Last Name: &lt;content select=".last-name"&gt;&lt;/content&gt;&lt;/h3&gt;
-&lt;h3&gt;First Name: &lt;content select=".first-name"&gt;&lt;/content&gt;&lt;/h3&gt;
-&lt;h3&gt;&lt;content select=""&gt;&lt;/content&gt;&lt;/h3&gt;
-            </code></pre>
-            <div class="ribbon-wrapper-blue">
-              <div class="ribbon-blue">Shadow</div>
-            </div>
-          </div>
-
-          <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;div class="widget"&gt;
-  Hello World
-  &lt;span class="first-name"&gt;Rob&lt;/span&gt;
-  &lt;span class="last-name"&gt;Dodson&lt;/span&gt;
-&lt;/div&gt;
-          </code></pre>
-
-          <template>
-            <style>h3 { margin: 0 0 10px; text-align: left; }</style>
-            <h3>Last Name: <content select=".last-name"></content></h3>
-            <h3>First Name: <content select=".first-name"></content></h3>
-            <h3><content select=""></content></h3>
-          </template>
-
-          <div class="widget expand">
-            Hello
-            <span class="first-name">Rob</span>
-            <span class="last-name">Dodson</span>
-            World
-          </div>
-        </section>
-
-        <section>
-          <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html"><img src="./img/shadow-dom-viz.png"></a>
-        </section>
-
-        <section class="left-align">
           <h3>Styles in the Shadow DOM <br><strong>are protected</strong> from the <br>parent document.</h3>
         </section>
 
@@ -886,6 +800,92 @@
           </template>
 
           <div class="widget"></div>
+        </section>
+
+        <section class="left-align">
+          <h3><strong>Insertion points</strong> invite content from the host element into the Shadow DOM.</h3>
+
+          <h3>Use the <strong>&lt;content&gt; tag</strong> to create an insertion point.</h3>
+        </section>
+
+        <section id="demo-insertion-points" class="demo">
+          <h3>Insertion Points</h3>
+          <div class="demo-code">
+            <div class="ribbon-container">
+              <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;template&gt;
+  &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
+&lt;/template&gt;
+              </code></pre>
+              <div class="ribbon-wrapper-blue">
+                <div class="ribbon-blue">Shadow</div>
+              </div>
+            </div>
+
+            <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;div class="widget"&gt;Jigglypuff&lt;/div&gt;
+            </code></pre>
+          </div>
+
+          <div class="widget">
+            <div class="hidden pokemon">
+              Jigglypuff
+            </div>
+          </div>
+
+          <template>
+            <h2>A Wild <content></content> Appeared!</h2>
+          </template>
+
+          <img class="jigglypuff chromeless" src="./img/jigglypuff.png">
+
+          <aside class="notes">
+            A single content tag is kind of like a catch-all
+          </aside>
+        </section>
+
+        <section class="left-align">
+          <h3>Specific content can be targeted with the <strong>select</strong> attribute. </h3>
+        </section>
+
+        <section id="demo-select" class="demo">
+          <h3>Select</h3>
+          <div class="ribbon-container">
+            <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;h3&gt;Last Name: &lt;content select=".last-name"&gt;&lt;/content&gt;&lt;/h3&gt;
+&lt;h3&gt;First Name: &lt;content select=".first-name"&gt;&lt;/content&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;content select=""&gt;&lt;/content&gt;&lt;/h3&gt;
+            </code></pre>
+            <div class="ribbon-wrapper-blue">
+              <div class="ribbon-blue">Shadow</div>
+            </div>
+          </div>
+
+          <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;div class="widget"&gt;
+  Hello World
+  &lt;span class="first-name"&gt;Rob&lt;/span&gt;
+  &lt;span class="last-name"&gt;Dodson&lt;/span&gt;
+&lt;/div&gt;
+          </code></pre>
+
+          <template>
+            <style>h3 { margin: 0 0 10px; text-align: left; }</style>
+            <h3>Last Name: <content select=".last-name"></content></h3>
+            <h3>First Name: <content select=".first-name"></content></h3>
+            <h3><content select=""></content></h3>
+          </template>
+
+          <div class="widget expand">
+            Hello
+            <span class="first-name">Rob</span>
+            <span class="last-name">Dodson</span>
+            World
+          </div>
+        </section>
+
+        <section>
+          <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html"><img src="./img/shadow-dom-viz.png"></a>
         </section>
         
         <section class="left-align">
